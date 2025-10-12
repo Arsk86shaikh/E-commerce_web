@@ -1,6 +1,10 @@
 # E-Commerce Web Application 🛒
 
-![E-commerce Web Clip ](./public/images/ecommerceweb.mp4)
+## Demo Video
+[![E-commerce Demo](./public/images/ecommerceweb.png)](./public/images/ecommerceweb.mp4)  
+*Click the image to watch the demo video*
+
+---
 
 ## Description
 This is a **full-stack E-commerce web application** built with **Node.js, Express.js, EJS, and CSS/JS**.  
@@ -12,11 +16,10 @@ It features a responsive and modern UI, making it accessible on both desktop and
 ## Features
 
 - Browse products by category: Electronics, Fashion, Living Items.
-- View product details including description, price, and tech-stack (if applicable).
+- View product details including description and price.
 - Add to Cart and Buy Now functionality.
 - Responsive and modern design for both mobile and desktop.
 - Smooth navigation with toggling menu and scroll-to-top button.
-- Project section showcasing portfolio-like items (if included).
 - Page visibility change handling for better user experience.
 - Tawk.to Live Chat integration for customer support.
 - Basic security: Developer tools disabling for production (optional).
@@ -27,7 +30,7 @@ It features a responsive and modern UI, making it accessible on both desktop and
 
 - **Frontend:** HTML, CSS, JavaScript, EJS
 - **Backend:** Node.js, Express.js
-- **Database:** (Mention if using any, e.g., MongoDB or JSON for product data)
+- **Database:** (JSON or your database)
 - **Libraries & Plugins:** Font Awesome, Isotope (optional), Tawk.to Live Chat
 
 ---
@@ -37,12 +40,6 @@ It features a responsive and modern UI, making it accessible on both desktop and
 1. **Clone the repository:**
 ```bash
 git clone https://github.com/Arsk86shaikh/E-commerce_web.git
-
-2. **Navigate to the project folder:**
-
-```bash
-cd E-commerce_web
-```
 
 3. **Install dependencies:**
 
