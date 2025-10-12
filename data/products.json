@@ -1,0 +1,130 @@
+{
+    "categore": [
+        {
+            "id": 1,
+            "name": "Electronics",
+            "products": [
+                {
+                    "id": 101,
+                    "name": "Vivo v40 Pro",
+                    "description": "V40 Pro 12GB+512GB Ganges Blue ZEISS Multifocal Portrait ZEISS Telephoto Portrait Camera ZEISS Style Portrait India’s slimmest smartphone in the 5500mAh battery category [2] Ultra-Slim 3D Curved Display IP68 Dust & Water Resistance ZEISS Cinematic Portrait Video AI Eraser",
+                    "price": 53999,
+                    "image": "/images/smartphone.png"
+                },
+                {
+                    "id": 102,
+                    "name": "Laptop",
+                    "description": "Processor:13th Gen Intel® Core™ i9-13900HX (36 MB cache, 24 cores, 32 threads, up to 5.40 GHz Turbo) , Operating: Windows 11 Home Single Language, English Grapics: NVIDIA® GeForce RTX™ 4060, 8 GB GDDR6 Memory: 16 GB: 2 x 8 GB, DDR5, 4800 MT/s Storage:1TB, M.2, PCIe NVMe, SSD, Display: 16 QHD+ 2560x1600, 240Hz, Non-Touch, 100% DCI-P3, 3ms, ComfortView Plus, NVIDIA G-SYNC + DDSMetallic Nightshade with Black thermal shelfUS English 1-Zone RGB Backlit Keyboard with G-Key",
+                    "price": 40999,
+                    "image": "/images/laptop.avif"
+                },
+                {
+                    "id": 103,
+                    "name": "HeadPhone",
+                    "description": "Headphones are a pair of small loudspeaker drivers worn on or around the head over a user's ears. They are electroacoustic transducers, which convert an electrical signal to a corresponding sound.A headset is a combination of headphone and microphone. Talking Time: 19-22 HoursMusic Playback: 19-22 Hours Full Charged: 4-5 hoursStandby Time: Up to 22 Hours WIRELESS BLUETOOTH HEADPHONES Wireless Active Noise Cancellation | Supports Bluetooth version 4.0 | Aux-in Port Answer/End Calls, Play/Pause Music, Change Tracks, and Control Volume with a simple tap on the headphone.",
+                    "price": 1259.99,
+                    "image": "/images/headphone.jpg"
+                },
+                {
+                    "id": 104,
+                    "name": "Digital Camera",
+                    "description": "Additional Info 24.3MP FX-Format CMOS Sensor | EXPEED 6 Image Processor | UHD 4K and Full HD Video Recording | 3.6m-Dot OLED Electronic Viewfinder | Limited 2-Year Warranty  Compact and capable, the Nikon Z 5 is an FX-format mirrorless camera with a well-rounded feature-set to suit both photo and video needs. Its 24.3MP CMOS sensor and EXPEED 6 processor afford wide sensitivity to ISO 51200, quick shooting at 4.5 fps, and UHD 4K video at 30 fps.",
+                    "price": 60999,
+                    "image": "/images/camera.jpeg"
+                },
+                {
+                    "id": 105,
+                    "name": "LCD Smart Tv",
+                    "description": "Product Name: 32-Inch Full HD Smart Android LED TV Screen Type: LED Color: Black Panel Material: IPS Resolution: Full HD (1080p) Warranty: 1-Year Service Warranty Model Name/Number: 32-Inch LED TV Features:Smart TV with the latest Android version Pre-downloaded apps: YouTube, Netflix, Amazon ,Prime Video Screen mirroring: Mobile to TV wireless connection Slim design Full HD display (1080p)",
+                    "price": 25999,
+                    "image": "/images/Product1.jpeg"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Fashion",
+            "products": [
+                {
+                    "id": 201,
+                    "name": "Sneakers",
+                    "description": " Flexible rubber soles, comfortable build, and often more casual, fashionable design. mpassing all types of footwear, including formal, casual, and athletic styles. a light shoe that has a top made of cloth and a bottom made of rubber, worn esp. for sports Building upon the esteemed Carina legacy, this iteration comes with a sleeker and more streamlined profile. The ground-hugging tooling and lower cupsole, accentuated by a fashionable toe bumper, create a sophisticated court silhouette that's as pleasing to the e Ensuring your comfort is not compromised, the SoftFoam+ sockliner nestles your feet in plush cushioning that lasts all day. SoftFoam+: PUMA’s comfort sockliner for instant step-in and long",
+                    "price": 1599,
+                    "image": "/images/sneakers.jpg"
+                },
+                {
+                    "id": 202,
+                    "name": "Jacket",
+                    "description": "Warm and trendy jacket. a garment for the upper body usually having a front opening, collar, lapels, sleeves, and pockets. b. : something worn or fastened around the body but not for use as clothing",
+                    "price": 1119.99,
+                    "image": "/images/jacket.jpg"
+                },
+                {
+                    "id": 203,
+                    "name": "Ladies Bags",
+                    "description": "Sentimentality may cloud my vision, for the tote in my possession belongs to my late grandmother. And when I tell you I was complimented frequently for it while in Italy, I mean I felt I needed to use the bag to beat back admirers waxing: “Wow, is Vera Bradley back?”; “Is it reversible?!”; “The textiles are so beautiful.” I often caught myself fantasizing about dumping it upside down to perform a “What’s in my bag” for nobody in particular—so capacious is the tote that I was needlessly carrying multiple novels within and rarely remembered to leave my toiletry kit on the hotel bathroom counter where it belonged. Handy pockets ringing the interior are just icing, and would have kept my passport safely inside had I ever been moved to act on the aforementioned dumping.",
+                    "price": 709.99,
+                    "image": "/images/bags.webp"
+                },
+                {
+                    "id": 204,
+                    "name": "Ladies Sandal ",
+                    "description": " A sandal is a lightweight, open shoe that you're most likely to wear in the summer time. If you want your toes to show, buy some sandals! The difference between a sandal and a conventional shoe is that much of your feet are exposed when you wear sandals.",
+                    "price": 2129,
+                    "image": "/images/sandal.webp"
+                },
+                {
+                    "id": 205,
+                    "name": "Formal Combo ",
+                    "description": "While a formal shirt is usually paired with dress pants or slacks, it can work with well-fitted dark jeans for a more casual look. The jeans should be crisp and wrinkle-free, and pairing the shirt with dressier shoes and accessories like a belt or watch can help balance the shirt's formality with the jeans' casualness",
+                    "price": 3019.99,
+                    "image": "/images/combo.jpg"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Living Items",
+            "products": [
+                {
+                    "id": 301,
+                    "name": "Sofa",
+                    "description": " The long transverse sofa has been replaced with a multipurpose second-row bench that uses a pivoting design to switch between front- and rear-facing modes, an alternative to the swivel seats common in camper vans. Comfortable and stylish sofa for your living room.The long transverse sofa has been replaced with a multipurpose second-row bench that uses a pivoting design to switch between front- and rear-facing modes, an alternative to the swivel seats common in camper vans.",
+                    "price": 24499.99,
+                    "image": "/images/sofa.webp"
+                },
+                {
+                    "id": 302,
+                    "name": "Dining Table",
+                    "description": " 5x3 feet table accommodates six diners comfortably. Natural teak wood construction for durability and elegance. Coordinated set includes chairs for a complete dining solution. Sturdy build ensures stability and long-lasting use. Timeless teak finish adds warmth and sophistication. Comfortable seating for an enjoyable dining experience. Versatile for both formal and casual dining occasions.",
+                    "price": 1399.99,
+                    "image": "/images/dining table.webp"
+                },
+                {
+                    "id": 303,
+                    "name": "Wooden ",
+                    "description": "【Easy to Assemble】The floating shelves for wall from comes with a complete set of secure mounting hardware Easy to mount with all necessary hardware Included. Hardware is not visible when mounted. dimensions: Extra large: 11.4- 11.4- 3.8  Large: 9.8 - 9.8 - 3.8 Medium: 7.9 - 7.9 - 3.8 Small: 5.9 -5.9 -3.8  4 .Set of 4 shelves color : brown",
+                    "price": 24499.99,
+                    "image": "/images/wooden.jpg"
+                },
+                {
+                    "id": 304,
+                    "name": "FLANGES",
+                    "description": " 15mm, 20mm, 25mm & 32mm. Our flanges are very strong, durable and locally made in SA (except 32mm). Use it with normal galvanised pipes and fittings. - CUT TO LENGTH  GALVANISED PIPES.Order your custom length galvanised pipes in any length you need. Refer to our price list page. All our pipes are cut and threaded at our workshop. (48 HOUR WAITING TIME APPLICABLE BUT ARE USUALLY SOONER). We cater for pipes and fittings up to 50mm as well on special request.",
+                    "price": 1399.99,
+                    "image": "/images/flanges.webp"
+                },
+                {
+                    "id": 305,
+                    "name": "Kitchen Furniture",
+                    "description": " Kitchen cabinets are the built-in furniture installed in many kitchens for storage of food, cooking equipment, and often silverware and dishes for table service. Appliances such as refrigerators, dishwashers, and ovens are often integrated into kitchen cabinetry.",
+                    "price": 1399.99,
+                    "image": "/images/kitchen.webp"
+                }
+                
+            ]
+        }
+    ]
+}
+
+

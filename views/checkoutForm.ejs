@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checkout & Order Confirmation</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+<div class="max-w-7xl mx-auto p-6">
+  <% if (orderConfirmed) { %>
+    <!-- Order Confirmation -->
+    <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+      <h1 class="text-3xl font-bold text-center text-green-600 mb-6">🎉 Order Confirmed!</h1>
+      <p class="text-center text-gray-700 mb-4">Thank you for your purchase, <span class="font-semibold"><%= user.name %></span>!</p>
+      <p class="text-center text-gray-600 mb-8">Your order ID is <span class="font-mono text-blue-600"><%= order._id %></span></p>
+      
+      <div class="mb-8">
+        <h2 class="text-2xl font-semibold mb-4">📦 Ordered Products</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <% order.products.forEach(productInfo => { %>
+            <% const product = productInfo.productDetails; %>
+            <div class="flex items-center bg-gray-50 p-4 rounded shadow-sm">
+              <img src="<%= product.image %>" alt="<%= product.name %>" class="w-24 h-24 object-cover rounded mr-4">
+              <div>
+                <h3 class="text-lg font-bold"><%= product.name %></h3>
+                <p class="text-sm text-gray-600">Quantity: <%= productInfo.quantity %></p>
+                <p class="text-green-700 font-semibold mt-1">₹<%= product.price %></p>
+              </div>
+            </div>
+          <% }) %>
+        </div>
+      </div>
+
+      <div class="text-xl font-semibold text-right mb-6">
+        Total Paid: ₹<span class="text-green-700"><%= order.totalAmount %></span>
+      </div>
+
+      <div class="text-center">
+        <a href="/" class="inline-block px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-700 transition">Back to Home</a>
+      </div>
+    </div>
+  
+  <% } else { %>
+    <!-- Checkout Section -->
+    <h1 class="text-3xl font-bold text-center mb-8">Checkout</h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Shipping Form -->
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-xl font-semibold mb-4">Shipping Information</h2>
+        <form action="/complete-order" method="POST" id="checkout-form" class="space-y-4">
+          <input type="hidden" name="orderId" value="<%= order._id %>"/>
+          <input type="hidden" name="productId" value="<%= product._id %>"/>
+          <input type="hidden" name="price" value="<%= product.price %>"/>
+
+          <!-- User Info (Auto-fill if user is logged in) -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block font-medium">First Name</label>
+              <input type="text" name="firstName" value="<%= user.firstName %>" required class="w-full border border-gray-300 rounded px-3 py-2">
+            </div>
+            <div>
+              <label class="block font-medium">Last Name</label>
+              <input type="text" name="lastName" value="<%= user.lastName %>" required class="w-full border border-gray-300 rounded px-3 py-2">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block font-medium">Phone</label>
+              <input type="text" name="phone" required class="w-full border border-gray-300 rounded px-3 py-2">
+            </div>
+            <div>
+              <label class="block font-medium">Email</label>
+              <input type="email" name="email" value="<%= user.email %>" required class="w-full border border-gray-300 rounded px-3 py-2">
+            </div>
+          </div>
+
+          <label class="block font-medium">Address</label>
+          <input type="text" name="address" required class="w-full border border-gray-300 rounded px-3 py-2">
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div>
+              <label class="block font-medium">City</label>
+              <input type="text" name="city" required class="w-full border border-gray-300 rounded px-3 py-2">
+            </div>
+            <div>
+              <label class="block font-medium">State</label>
+              <select name="state" id="state" required class="w-full border border-gray-300 rounded px-3 py-2">
+                <option value="">Select State</option>
+              </select>
+            </div>
+            <div>
+              <label class="block font-medium">ZIP</label>
+              <input type="text" name="zip" required class="w-full border border-gray-300 rounded px-3 py-2">
+            </div>
+          </div>
+
+          <!-- Payment -->
+          <div class="mt-6">
+            <h2 class="text-xl font-semibold mb-2">Payment Method</h2>
+            <div class="space-y-4">
+              <!-- Same Payment Options -->
+              <%- include('partials/payment-methods') %>
+            </div>
+          </div>
+
+          <div class="mt-6 text-xl font-semibold">
+            Total Amount: ₹<span id="total-amount"><%= product.price %></span>
+          </div>
+
+          <button type="submit" class="mt-4 w-full bg-green-600 text-white py-3 rounded hover:bg-green-700 transition">
+            Place Order
+          </button>
+        </form>
+      </div>
+
+      <!-- Order Summary -->
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-xl font-semibold mb-4">Order Summary</h2>
+        <div class="flex space-x-4">
+          <img src="<%= product.image %>" alt="<%= product.name %>" class="w-24 h-24 object-cover rounded" />
+          <div>
+            <h3 class="font-bold text-lg"><%= product.name %></h3>
+            <p class="text-gray-700">₹<%= product.price %></p>
+            <div class="mt-2 flex items-center space-x-2">
+              <button id="decrease-quantity" class="px-2 py-1 bg-gray-300 rounded">-</button>
+              <span id="quantity" class="font-semibold">1</span>
+              <button id="increase-quantity" class="px-2 py-1 bg-gray-300 rounded">+</button>
+            </div>
+            <p class="mt-2">Subtotal: ₹<span id="subtotal"><%= product.price %></span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% } %>
+</div>
+
+<script>
+  // Dynamic state options
+  const states = ["Andhra Pradesh", "Maharashtra", "Tamil Nadu", "Karnataka", "Gujarat", "West Bengal", "Punjab", "Delhi"];
+  const stateSelect = document.getElementById("state");
+  if (stateSelect) {
+    states.forEach(state => {
+      const option = document.createElement("option");
+      option.value = state;
+      option.textContent = state;
+      stateSelect.appendChild(option);
+    });
+  }
+
+  // Payment Toggle
+  document.querySelectorAll('input[name="paymentMethod"]').forEach(radio => {
+    radio.addEventListener('change', () => {
+      document.querySelectorAll('.payment-details').forEach(el => el.classList.add('hidden'));
+      if (radio.value === 'credit') document.getElementById('credit-card-fields').classList.remove('hidden');
+      if (radio.value === 'debit') document.getElementById('debit-card-fields').classList.remove('hidden');
+      if (radio.value === 'upi') document.getElementById('upi-fields').classList.remove('hidden');
+      updateTotal();
+    });
+  });
+
+  // Quantity and total update
+  const quantityEl = document.getElementById("quantity");
+  const subtotalEl = document.getElementById("subtotal");
+  const totalAmountEl = document.getElementById("total-amount");
+  const basePrice = parseFloat("<%= product.price %>");
+
+  document.getElementById("increase-quantity").addEventListener("click", () => {
+    quantityEl.textContent = +quantityEl.textContent + 1;
+    updateTotal();
+  });
+
+  document.getElementById("decrease-quantity").addEventListener("click", () => {
+    if (+quantityEl.textContent > 1) {
+      quantityEl.textContent = +quantityEl.textContent - 1;
+      updateTotal();
+    }
+  });
+
+  function updateTotal() {
+    const qty = +quantityEl.textContent;
+    const method = document.querySelector('input[name="paymentMethod"]:checked')?.value;
+    const extra = method === 'cod' ? 50 : 0;
+    const subtotal = basePrice * qty;
+    subtotalEl.textContent = subtotal.toFixed(2);
+    totalAmountEl.textContent = (subtotal + extra).toFixed(2);
+  }
+</script>
+
+</body>
+</html>
