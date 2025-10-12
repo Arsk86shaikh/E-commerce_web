@@ -1,6 +1,6 @@
 # E-Commerce Web Application 🛒
 
-![E-commerce Screenshot](assets/images/screenshot.png)
+![E-commerce Web Clip ](./public/images/ecommerceweb.mp4)
 
 ## Description
 This is a **full-stack E-commerce web application** built with **Node.js, Express.js, EJS, and CSS/JS**.  
