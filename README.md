@@ -1,7 +1,7 @@
 # E-Commerce Web Application 🛒
 
 ## Demo Video
-[![E-commerce Demo](./public/images/ecommerceweb.gif) ]
+(./public/images/ecommerceweb.gif) 
 *Click the image to watch the demo video*
 
 ---
