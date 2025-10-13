@@ -71,16 +71,6 @@ E-commerce_web/
 
 ---
 
-## Screenshots
-
-![Homepage Screenshot](assets/images/homepage.png)
-*Homepage with navigation and product categories*
-
-![Product Section](assets/images/products.png)
-*View of products with Add to Cart and Buy Now buttons*
-
-![Responsive Design](assets/images/responsive.png)
-*Mobile-friendly responsive layout*
 
 ---
 
